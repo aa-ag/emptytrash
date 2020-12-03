@@ -1,5 +1,6 @@
 import os
 import shutil
+# shutil documentatio: https://docs.python.org/3/library/shutil.html
 
 # terminal must have full disk access 
 path_to_trash = "/Users/aaronaguerrevere/.Trash"

@@ -13,7 +13,10 @@ files_in_trash = os.listdir(trash)
 
 ############------------ FUNCTION(S) ------------############
 def buh_bye_trash():
-    for file in files_in_trash:
+
+    print(f"here's everything that was in your trash: {files_in_trash}")
+
+    for i, file in enumerate(files_in_trash):
         # all files in trash
         files_in_trash_path = os.path.join(trash, file)
 
@@ -21,11 +24,12 @@ def buh_bye_trash():
         try:
             if os.path.isfile(files_in_trash_path):
                 os.remove(files_in_trash_path)
-                print("File successfully deleted")
+                print(f"file {i+1}/{len(files_in_trash)} successfully deleted")
+            
             # otherwise, remove whole empty directory
             elif os.path.isdir(files_in_trash_path):
                 shutil.rmtree(files_in_trash_path)
-                print("Directory successfully deleted")
+                print(f"file {i+1}/{len(files_in_trash)} (Directory) successfully deleted")
 
         except Exception as e:
             print(e)
@@ -34,6 +38,6 @@ def buh_bye_trash():
     print("Trash emptied!")
 
 
-# ############------------ DRIVER CODE ------------############
+############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
     buh_bye_trash()

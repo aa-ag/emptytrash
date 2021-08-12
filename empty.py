@@ -15,7 +15,12 @@ files_in_trash = os.listdir(trash)
 
 ############------------ FUNCTION(S) ------------############
 def create_test_files_to_delete():
-    pass
+    test_file = open(f"test_file_number.txt", 'w')
+
+    test_file.write("Testing, testing, testing.")
+    test_file.write("\nTesting.\ntesting.\ntesting.")
+
+    test_file.close()
 
 
 def buh_bye_trash():
@@ -52,4 +57,4 @@ def buh_bye_trash():
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    pass
+    create_test_files_to_delete()

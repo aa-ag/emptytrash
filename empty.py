@@ -14,7 +14,7 @@ files_in_trash = os.listdir(trash)
 
 
 ############------------ FUNCTION(S) ------------############
-def create_test_files_to_delete():
+def create_test_files():
 
     for i in range(1, 4, 1):
         test_file = open(f"test_file_number_{i}.txt", 'w')
@@ -59,4 +59,13 @@ def buh_bye_trash():
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    create_test_files_to_delete()
+    # sets frequency for test file creation in seconds
+    schedule.every(30).seconds.do(create_test_files)
+
+    # sets frequency for test file deletion in seconds
+    schedule.every(31).seconds.do(buh_bye_trash)
+
+    # create loop to keep running
+    while True:
+        schedule.run_pending()
+        time.sleep(1)

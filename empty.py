@@ -15,12 +15,14 @@ files_in_trash = os.listdir(trash)
 
 ############------------ FUNCTION(S) ------------############
 def create_test_files_to_delete():
-    test_file = open(f"test_file_number.txt", 'w')
 
-    test_file.write("Testing, testing, testing.")
-    test_file.write("\nTesting.\ntesting.\ntesting.")
+    for i in range(1, 4, 1):
+        test_file = open(f"test_file_number_{i}.txt", 'w')
 
-    test_file.close()
+        test_file.write(f"Testing {i}, testing {i}, testing {i}.")
+        test_file.write(f"\nTesting {i}.\ntesting {i}.\ntesting {i}.")
+
+        test_file.close()
 
 
 def buh_bye_trash():

@@ -2,6 +2,7 @@
 import os
 import shutil
 import settings
+import schedule
 
 
 ############------------ GLOBAL VARIABLE(S) ------------############

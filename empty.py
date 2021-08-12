@@ -24,6 +24,22 @@ def create_test_files():
 
         test_file.close()
 
+        print(f"Test file #{i}/3 successfully created.")
+
+
+def delete_test_files():
+    # walk/pierce thru project file structure
+    for root, directories, files in os.walk("."):
+        # check all files
+        for filename in files:
+            # if it's a text file
+            if '.txt' in filename:
+                # move it to the trash
+                # a delete will be terminal
+                # and won't send to trash
+                print(f"Sending \"{filename}\" to the trash.")
+                shutil.move(filename, trash)
+
 
 def buh_bye_trash():
     '''
@@ -59,13 +75,7 @@ def buh_bye_trash():
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    # sets frequency for test file creation in seconds
-    schedule.every(30).seconds.do(create_test_files)
+    create_test_files()
+    delete_test_files()
 
-    # sets frequency for test file deletion in seconds
-    schedule.every(31).seconds.do(buh_bye_trash)
-
-    # create loop to keep running
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
+    

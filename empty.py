@@ -15,7 +15,11 @@ files_in_trash = os.listdir(trash)
 
 ############------------ FUNCTION(S) ------------############
 def create_test_files():
-
+    '''
+     creates 3 enumerated test files, each
+     with some enumerated text in them; then alerts
+     the user when successfully finished.
+    '''
     for i in range(1, 4, 1):
         test_file = open(f"test_file_number_{i}.txt", 'w')
 
@@ -28,6 +32,10 @@ def create_test_files():
 
 
 def delete_test_files():
+    '''
+     reads entire project directory
+     and sends test files to trash.
+    '''
     # walk/pierce thru project file structure
     for root, directories, files in os.walk("."):
         # check all files
@@ -77,5 +85,7 @@ def buh_bye_trash():
 if __name__ == "__main__":
     create_test_files()
     delete_test_files()
+    time.sleep(30)
+    buh_bye_trash()
 
     

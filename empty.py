@@ -3,6 +3,7 @@ import os
 import shutil
 import settings
 import schedule
+import time
 
 
 ############------------ GLOBAL VARIABLE(S) ------------############
@@ -13,7 +14,17 @@ files_in_trash = os.listdir(trash)
 
 
 ############------------ FUNCTION(S) ------------############
+def create_test_files_to_delete():
+    pass
+
+
 def buh_bye_trash():
+    '''
+     alerts user of what's in the trash, loops thru 
+     all files, deletes each whether it's a file or
+     a directory;  let's user know every time, and
+     at the end too once everything has been deleted
+    '''
 
     print(f"here's everything that was in your trash: {files_in_trash}")
 
@@ -41,4 +52,4 @@ def buh_bye_trash():
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    buh_bye_trash()
+    pass

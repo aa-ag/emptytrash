@@ -83,8 +83,15 @@ def buh_bye_trash():
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    create_test_files()
+    # create_test_files()
     # delete_test_files()
-    # buh_bye_trash()
+
+    # sets frequency for test file deletion in seconds
+    schedule.every(31).seconds.do(buh_bye_trash)
+
+    # create loop to keep running
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
 
     

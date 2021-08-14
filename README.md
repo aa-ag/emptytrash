@@ -15,7 +15,11 @@ Full Disk Access is needed for this program to run.
 - `brew install redis`
 - `conda install -c conda-forge rq`
 
-### RUN
+### cron job set up
+
+[contrab.guru](https://crontab.guru/)
+
+### manual run
 
 3 tabs are needed: 
 

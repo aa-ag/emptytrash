@@ -29,6 +29,7 @@ python tasks.py
 - `crontab -e`
 - `i`
 - `:wq`
+- `tail -f /var/log/syslog | grep cron -i`
 
 ### manual run
 

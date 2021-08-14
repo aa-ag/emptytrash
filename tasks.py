@@ -83,9 +83,9 @@ def buh_bye_trash():
 
 ############------------ DRIVER CODE ------------############
 if __name__ == "__main__":
-    create_test_files()
-    delete_test_files()
-    time.sleep(30)
-    buh_bye_trash()
+    pass
+    # create_test_files()
+    # delete_test_files()
+    # buh_bye_trash()
 
     

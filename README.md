@@ -12,3 +12,13 @@ Full Disk Access is needed for this program to run.
 - `conda activate empty`
 - `conda install python`
 - `conda install -c conda-forge schedule`
+- `brew install redis`
+- `conda install -c conda-forge rq`
+
+### RUN
+
+3 tabs are needed: 
+
+1. `redis-server`
+2. `rq worker --with-scheduler`
+3. `python app.py`

@@ -87,7 +87,7 @@ if __name__ == "__main__":
     # delete_test_files()
 
     # sets frequency for test file deletion in seconds
-    schedule.every(31).seconds.do(buh_bye_trash)
+    schedule.every(7).days.do(buh_bye_trash)
 
     # create loop to keep running
     while True:

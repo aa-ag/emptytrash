@@ -1,14 +1,13 @@
 ############------------ IMPORTS ------------############
 import os
 import shutil
-import settings
 import schedule
 import time
 
 
 ############------------ GLOBAL VARIABLE(S) ------------############
 # terminal must have full disk access 
-trash = settings.path_to_trash
+trash = "/Users/aaronaguerrevere/.Trash"
 
 files_in_trash = os.listdir(trash)
 
@@ -82,16 +81,19 @@ def buh_bye_trash():
 
 
 ############------------ DRIVER CODE ------------############
-if __name__ == "__main__":
+buh_bye_trash()
+
+# if __name__ == "__main__":
+#     buh_bye_trash()
     # create_test_files()
     # delete_test_files()
 
     # sets frequency for test file deletion in seconds
-    schedule.every(7).days.do(buh_bye_trash)
+    # schedule.every(7).days.do(buh_bye_trash)
 
-    # create loop to keep running
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
+    # # create loop to keep running
+    # while True:
+    #     schedule.run_pending()
+    #     time.sleep(1)
 
     

@@ -19,6 +19,11 @@ Full Disk Access is needed for this program to run.
 
 [contrab.guru](https://crontab.guru/)
 
+```
+0 0 * * 0 cd /Users/aaronaguerrevere/Documents/projects/empty && usr/bin/
+python tasks.py
+```
+
 ### manual run
 
 3 tabs are needed: 

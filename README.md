@@ -24,6 +24,12 @@ Full Disk Access is needed for this program to run.
 python tasks.py
 ```
 
+### cron job set up/vim
+
+- `crontab -e`
+- `i`
+- `:wq`
+
 ### manual run
 
 3 tabs are needed: 
